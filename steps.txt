@@ -1,0 +1,146 @@
+ftp.designhouse.esy.es
+/home/u791802845/public_html/
+u791802845.maxxx
+L7jTfq7SQnSH
+
+@import "../libs/rubik/rubik"
+
+работа с Bower:
+-------------------------------------------------
+#2.1.4 =2.1.4
+#~2.1.4 >=2.1.4 <2.2.0
+#^2.1.4 >=2.1.4 <3.0.0
+-------------------------------------------------
+bower i jquery#1.0.1 -S
+
+"dependencies": {
+    "jquery": "1.0.1"
+  }
+добавим ~
+"dependencies": {
+    "jquery": "~1.0.1"
+  }
+bower update jquery
+bower list
+jquery#1.0.4 (latest is ...)
+-------------------------------------------------
+
+
+
+
+ѕлагины: 1/ 14:25
+------------------------------------------------
+Hamburgers: https://jonsuh.com/hamburgers/
+bower install css-hamburgers --save (-S)
+-------------------------------------------------
+Mmenu: http://mmenu.frebsite.nl
+bower install jQuery.mmenu --save
+-------------------------------------------------
+bower uninstall css-hamburgers jQuery.mmenu -S
+
+--------------------------------------------------
+
+equalHeights: https://github.com/mattbanks/jQuery.equalHeights
+Font Awesome: http://fontawesome.io/
+Fotorama: http://fotorama.io/
+
+Owl Carousel 2: https://owlcarousel2.github.io/OwlCarousel2/
+Selectize: https://selectize.github.io/selectize.js/
+
+HTML 5.2 - стили и скрипты в конце документа - ¬јЋ»ƒЌќ! 1/ 21:52
+
+npm -v     1/ 23:22
+node -v
+
+npm i -g gulp npm-check-updates
+gulp -v
+ncu	1/ 24:50
+npm i
+
+git установить - 1/ 27:28
+
+npm i -g bower - устанавливаем глобально 1/ 27:45
+bower -v
+
+gulp
+
+ttf, eot, wolf - шрифты
+конвертировать https://onlinefontconverter.com/
+https://www.fontsquirrel.com/
+
+Thin - 100   2/ 26:30
+Light - 300
+semiBold - 600
+Bold - bold
+extraBold - 800
+
+_vars.sass 2/ 29:00
+дефолтный шрифт
+акцентный цвет - по кнопкам и управл€ющим элементам!
+и пару основных цветов (если есть)
+
+хард ресета нет, но нормализаци€ присутствует в бутстрап сетке котора€ подключена в проекте
+font-size: 16px
+line-height: 1.75 - рассто€ние между строк (оптимальное!!!)
+
+HTML 5.2 - стили в конце! но пока грузитс€ боди - картинка распадаетс€ и собираетс€ когда доходит до стил€!
+дл€ этого inline <style> c  opacity: 0
+а в CSS body opacity: 1			2/ 37:00
+
+3/ 03:00
+in gulp.js adding in 'JS' section - 'app/libs/jquery-mmenu/source/jquery.mmenu.min.all.js',
+in _libs.sass adding "../libs/jquery-mmenu/source/jquery.mmenu.all.css"
+
+
+white-space: nowrap - что-бы оставалось на своих местах на маленьких экранах 3/ 36:10
+
+bower i --save css-hamburgers 3/ 39:10
+--------------------------------------------------------
+<li class="active"><a href="#">навчанн€</a></li> 
+class="active" должен быть в li  !!! 4/ 03:00
+----------------------------------------------------------------
+.mm-navbar .mm-title
+	text-transform: uppercase
+
+creative в меню - большими буквами
+
+------------------------------------------------------------------
+$('#my-menu').mmenu({
+		extensions: [ 'widescreen', 'effect-menu-slide', 'pagedim-black' ],
+		navbar: {
+			title: ''
+		}
+
+ 'widescreen', - у мен€ сразу разварачивает и не сварачивает!  ---> 4/ 08:40
+
+-----------------------------------------------------
+	offCanvas: {
+			position: 'left'			---> 4/ 11:30
+		}
+нам не нужно - и так слева
+-----------------------------------------------------
+
+API.bind('opened', function() {
+		$('.hamburger').addClass('is-active');		---> 4/ 16:45
+	}).bind('closed', function() {
+		$('.hamburger').removeClass('is-active');
+	});
+
+is-active  - не работает!!!
+решение - вместо 'opened', 'closed' - open:start , close:finish
+// Cube code starts here
+
+// Cube code ends here
+-----------------------------------------------------
+API.bind('opened', function() {
+		$('.hamburger--collapse-r').addClass('hamburger--collapse-r.is-active').removeClass('hamburger--collapse-r');
+	}).bind('closed', function() {
+		$('.hamburger--collapse-r').removeClass('is-active');
+	});
+----------------------------------------------------------
+
+
+
+
+
+
