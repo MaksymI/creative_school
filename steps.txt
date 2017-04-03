@@ -1,7 +1,4 @@
-ftp.designhouse.esy.es
-/home/u791802845/public_html/
-u791802845.maxxx
-L7jTfq7SQnSH
+
 
 @import "../libs/rubik/rubik"
 
