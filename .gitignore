@@ -5,6 +5,7 @@ app/fonts
 app/css
 dist
 .git
+pwd.txt
 
 
 /**/*.psd
